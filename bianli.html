@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style id="css">
+        body,div,ul,li,a,p{margin: 0;padding: 0;}
+        .clearfix::after{
+            width: 0;
+            height: 0;
+            content: "";
+            display: block;
+            clear: both;
+        }
+        .clearfix{zoom: 1;}
+        #box{
+           width: 800px;
+           height: 660px;
+            border:1px solid #000;
+            margin:100px auto;
+        }
+        #box ul{
+            list-style: none;
+            width: 800px;
+            height: 660px;
+        }
+         li{
+            float: left;
+            width: 200px;
+            height: 220px;
+            color: #999;
+        }
+        #box ul li a{
+           float: left;
+            width: 200px;
+            height: 200px;
+        }
+        #box ul li p{
+            float: left;
+            width: 200px;
+            height: 20px;
+            text-align: center;
+            line-height: 20px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+<div id="box">
+   <ul class="clearfix"
+        ><li id="mid1">
+            <a href="#"></a>
+            <p>话费</p>
+        </li
+        ><li id="mid2">
+            <a href="#"></a>
+            <p>机票</p>
+        </li
+        ><li id="mid3">
+            <a href="#"></a>
+            <p>电影票</p>
+        </li
+        ><li id="mid4">
+            <a href="#"></a>
+            <p>游戏</p>
+        </li
+        ><li id="mid5">
+            <a href="#"></a>
+            <p>彩票</p>
+        </li
+        ><li id="mid6">
+            <a href="#"></a>
+            <p>团购</p>
+        </li
+        ><li id="mid7">
+            <a href="#"></a>
+            <p>酒店</p>
+        </li
+        ><li id="mid8">
+            <a href="#"></a>
+            <p>水电煤</p>
+        </li
+        ><li id="mid9">
+            <a href="#"></a>
+            <p>众筹</p>
+        </li
+        ><li id="mid10">
+            <a href="#"></a>
+            <p>理财</p>
+        </li
+        ><li id="mid11">
+            <a href="#"></a>
+            <p>礼品卡</p>
+        </li
+        ><li id="mid12">
+            <a href="#"></a>
+            <p>白条</p>
+        </li
+        ></ul>
+</div>
+</body>
+</html>
+<script>
+    var oCss=document.getElementById("css");
+    function fn() {
+        var phtml ="";
+        for(var i=0 ; i<12 ; i++){
+            phtml += "#box ul li:nth-child("+(i+1)+") a{background: url("+arguments[i]+") no-repeat}";
+        }
+        oCss.innerHTML += phtml;
+    }
+    fn("\"../images/10.png\"","\"../images/11.png\"","\"../images/12.png\"","\"../images/13.png\"","\"../images/14.png\"","\"../images/15.png\"","\"../images/16.png\"","\"../images/17.png\"","\"../images/18.png\"","\"../images/19.png\"","\"../images/20.png\"","\"../images/21.png\"");
+
+    function fc(id) {
+        var oSearch=document.getElementById(id);
+        oSearch.onmouseover=function () {
+            oSearch.style.color="#c60";
+        }
+        oSearch.onmouseout=function () {
+            oSearch.style.color="#999";
+        }
+    }
+    fc("mid1");fc("mid2");fc("mid3");fc("mid4");fc("mid5");fc("mid6");
+    fc("mid7");fc("mid8");fc("mid9");fc("mid10");fc("mid11");fc("mid12");
+
+</script>
